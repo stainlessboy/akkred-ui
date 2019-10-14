@@ -38,7 +38,7 @@ const enhance = compose(
       // Background: '#262626',
       background: '#0b0c66',
 
-      // padding: '0',
+      // Padding: '0',
       // Color: '#222',
       fontfamily: 'Heebo',
       fontweight: '300',
@@ -100,88 +100,10 @@ const enhance = compose(
 )
 
 const Footer = props => {
-  const {classes, handleSubmit, onSubmit} = props
-  const openNotificationWithIcon = type => {
-    notification[type]({
-      message: 'Notification Title',
-      description:
-        'This is the content of the notification. This is the content of the notification. This is the content of the notification.'
-    })
-  }
+  const {classes} = props
 
   return (
     <div>
-      {/* <div style={{ */}
-      {/*  Width: '100%', */}
-      {/*  Height: '150px', */}
-      {/*  // background: '#3b5da7', */}
-      {/*  Background: '#142966', */}
-      {/*  Filter: 'drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16))', */}
-      {/*  TextAlign: 'center' */}
-
-      {/* }}> */}
-      {/*  <div style={{ */}
-      {/*    FontFamily: '"Futura Md BT"', */}
-      {/*    FontWeight: 'bold', */}
-      {/*    FontSize: '28px', */}
-      {/*    Color: '#fff', */}
-      {/*    MarginBottom: '10px', */}
-      {/*    PaddingTop: '10px' */}
-      {/*  }}>Подписывайтесь на новости */}
-      {/*  </div> */}
-      {/*  <div> */}
-      {/*    <form style={{ */}
-      {/*      ...fallbacksStyle('display', 'flex'), */}
-      {/*      Width: '800px', */}
-      {/*      TextAlign: 'center', */}
-      {/*      PaddingLeft: '400px' */}
-      {/*    }} onSubmit={handleSubmit}> */}
-      {/*      <div style={{}}> */}
-      {/*        <div> */}
-      {/*          <Field */}
-      {/*            Name="email" */}
-      {/*            Component="input" */}
-      {/*            Type="email" */}
-      {/*            Placeholder="Youremail@address.com" */}
-      {/*            Style={{ */}
-      {/*              Width: '500px', */}
-      {/*              Height: '42px', */}
-      {/*              Background: '#fff', */}
-      {/*              FontFamily: 'Heebo', */}
-      {/*              FontWeight: 'normal', */}
-      {/*              FontSize: '18px', */}
-      {/*              LineHeight: '37px', */}
-      {/*              TextAlign: 'left', */}
-      {/*              Color: '#777', */}
-      {/*              BorderRadius: '0', */}
-      {/*              PaddingLeft: '10px' */}
-
-      {/*            }} */}
-      {/*          /> */}
-      {/*        </div> */}
-      {/*      </div> */}
-
-      {/*      <div> */}
-      {/*        <Button style={{ */}
-      {/*          Width: '250px', */}
-      {/*          Height: '42px', */}
-      {/*          Background: 'transparent', */}
-      {/*          Color: '#fff', */}
-      {/*          FontFamily: '“Futura Md BT”', */}
-      {/*          FontWeight: 'bold', */}
-      {/*          FontSize: '18px', */}
-      {/*          BorderRadius: '0', */}
-      {/*          MarginLeft: '10px', */}
-
-      {/*          TextAlign: 'center', */}
-      {/*        }} type="submit" onClick={() => openNotificationWithIcon('success')} disabled={onSubmit}> */}
-      {/*          Подписаться */}
-      {/*        </Button> */}
-      {/*      </div> */}
-
-      {/*    </form> */}
-      {/*  </div> */}
-      {/* </div> */}
       <div className={classes.wrapper}>
         <div className={classes.menu}>
           Ушбу сайтда чоп этилган материаллардан фойдаланилганда www.akkred.uz хаволасини кўрсатиб ўтиш шарт
@@ -189,9 +111,6 @@ const Footer = props => {
         <div className={classes.menu}>
           © 2019.   Барча хуқуқлар химояланган.
         </div>
-
-
-
 
       </div>
       <div className={classes.wrapper2}>

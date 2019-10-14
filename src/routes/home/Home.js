@@ -801,136 +801,6 @@ const Home = props => {
           <hr/>
         </div>
 
-        {/* <div className={classes.newsWrapper}> */}
-        {/*  <div className={classes.textMain}>Медиа */}
-        {/*  </div> */}
-        {/*  <div style={{ */}
-        {/*    TextAlign: 'right', */}
-        {/*    MarginBottom: '20px' */}
-        {/*  }}> */}
-        {/*    <Link to={'/company'} style={{ */}
-        {/*      TextDecoration: 'none', */}
-        {/*      Color: '#0088cc', */}
-        {/*      // TextAlign: 'right', */}
-        {/*      PaddingRight: '20px', */}
-        {/*      FontSize: '17px' */}
-        {/*    }}><T>Медиа</T></Link> */}
-        {/*  </div> */}
-        {/*  <div className={classes.news}> */}
-        {/*    <div className={classes.mediaWrap}> */}
-        {/*      <img className={classes.newsImage} src={News} alt=""/> */}
-        {/*      <div className={classes.newText}>Национальный центр аккредитации */}
-        {/*        Прорабатывает вопрос о возможности */}
-        {/*      </div> */}
-        {/*      <div className={classes.newDate}>13 May 2019 */}
-        {/*      </div> */}
-        {/*    </div> */}
-        {/*    <div className={classes.mediaWrap}> */}
-        {/*      <img className={classes.newsImage} src={News} alt=""/> */}
-        {/*      <div className={classes.newText}>Национальный центр аккредитации */}
-        {/*        Прорабатывает вопрос о возможности */}
-        {/*      </div> */}
-        {/*      <div className={classes.newDate}>13 May 2019 */}
-        {/*      </div> */}
-        {/*    </div> */}
-        {/*    <div className={classes.mediaWrap}> */}
-        {/*      <img className={classes.newsImage} src={News} alt=""/> */}
-        {/*      <div className={classes.newText}>Национальный центр аккредитации */}
-        {/*        Прорабатывает вопрос о возможности */}
-        {/*      </div> */}
-        {/*      <div className={classes.newDate}>13 May 2019 */}
-        {/*      </div> */}
-        {/*    </div> */}
-        {/*    <div className={classes.mediaWrap}> */}
-        {/*      <img className={classes.newsImage} src={News} alt=""/> */}
-        {/*      <div className={classes.newText}>Национальный центр аккредитации */}
-        {/*        Прорабатывает вопрос о возможности */}
-        {/*      </div> */}
-        {/*      <div className={classes.newDate}>13 May 2019 */}
-        {/*      </div> */}
-        {/*    </div> */}
-
-        {/*  </div> */}
-
-        {/* </div> */}
-        {/* <div className={classes.newsWrapper}> */}
-        {/*  <div> */}
-        {/*    <div className={classes.Krugs}> */}
-
-        {/*      <div className={classes.krugWrapper}> */}
-        {/*        <div className={classes.krugText}> */}
-        {/*          <div className={classes.krug}> */}
-
-        {/*            <img style={{ */}
-        {/*              Width: '100%' */}
-        {/*            }} src={stat1} alt=""/> */}
-
-        {/*          </div> */}
-        {/*          <div className={classes.numbers}>1645</div> */}
-        {/*        </div> */}
-        {/*        <div> */}
-        {/*          Количество субъектов аккредитации */}
-        {/*        </div> */}
-
-        {/*      </div> */}
-        {/*      <div className={classes.krugWrapper}> */}
-        {/*        <div className={classes.krugText}> */}
-        {/*          <div className={classes.krug}> */}
-
-        {/*            <img style={{ */}
-        {/*              Width: '100%' */}
-        {/*            }} src={stat2} alt=""/> */}
-
-        {/*          </div> */}
-        {/*          <div className={classes.numbers}>461</div> */}
-        {/*        </div> */}
-        {/*        <div> */}
-        {/*          Рассмотрены материалы аккредитации за */}
-        {/*          2017 год */}
-        {/*        </div> */}
-
-        {/*      </div> */}
-        {/*      <div className={classes.krugWrapper}> */}
-        {/*        <div className={classes.krugText}> */}
-        {/*          <div className={classes.krug}> */}
-
-        {/*            <img style={{ */}
-        {/*              Width: '100%' */}
-        {/*            }} src={stat3} alt=""/> */}
-
-        {/*          </div> */}
-        {/*          <div className={classes.numbers}>123867</div> */}
-        {/*        </div> */}
-        {/*        <div> */}
-        {/*          Выдано всего протоколов испытаний с */}
-        {/*          Совмещенным знаком ILAC MRA */}
-        {/*        </div> */}
-
-        {/*      </div> */}
-        {/*      <div className={classes.krugWrapper}> */}
-        {/*        <div className={classes.krugText}> */}
-        {/*          <div className={classes.krug}> */}
-
-        {/*            <img style={{ */}
-        {/*              Width: '100%' */}
-        {/*            }} src={stat4} alt=""/> */}
-
-        {/*          </div> */}
-        {/*          <div className={classes.numbers}>11510</div> */}
-        {/*        </div> */}
-
-        {/*        <div> */}
-        {/*          Выдано сертификатов соответствия с */}
-        {/*          Совмещенным знаком IAF MLA */}
-        {/*        </div> */}
-
-        {/*      </div> */}
-
-        {/*    </div> */}
-
-        {/*  </div> */}
-
-        {/* </div> */}
         <div className={classes.newsWrapper}>
           <div className={classes.textMainLink}>Полезные ссылки
           </div>
@@ -962,11 +832,7 @@ const Home = props => {
               </div>
               <div className={classes.linkdetail}>
 
-                <div style={{
-                  // MarginTop: '-5px',
-                  // MarginBottom: '0'
-
-                }} className={classes.linkimage}><img src={link4} alt=""/></div>
+                <div className={classes.linkimage}><img src={link4} alt=""/></div>
 
                 <div>Стратегия действий по пяти приоритетным направлениям развития Республики Узбекистан в 2017-2021 годах</div>
                 <div className={classes.linkLink}>www.strategy.gov.uz</div>
@@ -992,90 +858,6 @@ const Home = props => {
           </div>
 
         </div>
-        {/* <div className={classes.otzivWrapper}> */}
-        {/*  <div className={classes.otzivTextMain}>Отзывы субъектов */}
-        {/*  </div> */}
-        {/*  <div className={classes.news}> */}
-        {/*    <div className={classes.otziv}> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: '"GT Walsheim Pro"', */}
-        {/*        FontWeight: '500', */}
-        {/*        FontSize: '20px', */}
-        {/*        TextAlign: 'left', */}
-        {/*        Color: '#696969', */}
-        {/*        MarginBottom: '10px' */}
-
-        {/*      }}> */}
-        {/*        Наша компания - предоставляет своим клиентам */}
-        {/*        Полный спектр инженерно-геодезических и инженерно- */}
-        {/*        Геологических и проектных услуг. Мы располагаем */}
-        {/*        Всем необходимым штатом специалистов и комплексом */}
-        {/*        Современного оборудования,... */}
-        {/*      </div> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: '"GT Walsheim Pro"', */}
-        {/*        FontWeight: '500', */}
-        {/*        FontSize: '23px', */}
-        {/*        Color: '#696969', */}
-        {/*        TextAlign: 'right' */}
-        {/*      }}> */}
-        {/*        Ким Сергей Павлович */}
-        {/*      </div> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: 'Helvetica Neue', */}
-        {/*        FontWeight: 'normal', */}
-        {/*        FontSize: '20px', */}
-        {/*        TextAlign: 'right', */}
-        {/*        Color: '#707070' */}
-        {/*      }}> */}
-        {/*        Генеральный директор АО «НИПИ «Каспиймунайгаз» */}
-        {/*      </div> */}
-
-        {/*    </div> */}
-        {/*    <div className={classes.otziv}> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: '"GT Walsheim Pro"', */}
-        {/*        FontWeight: '500', */}
-        {/*        FontSize: '20px', */}
-        {/*        TextAlign: 'left', */}
-        {/*        Color: '#696969', */}
-        {/*        MarginBottom: '10px' */}
-
-        {/*      }}> */}
-        {/*        Наша компания - предоставляет своим клиентам */}
-        {/*        Полный спектр инженерно-геодезических и инженерно- */}
-        {/*        Геологических и проектных услуг. Мы располагаем */}
-        {/*        Всем необходимым штатом специалистов и комплексом */}
-        {/*        Современного оборудования,... */}
-        {/*      </div> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: '"GT Walsheim Pro"', */}
-        {/*        FontWeight: '500', */}
-        {/*        FontSize: '23px', */}
-        {/*        Color: '#696969', */}
-        {/*        TextAlign: 'right' */}
-        {/*      }}> */}
-        {/*        Ким Сергей Павлович */}
-        {/*      </div> */}
-        {/*      <div style={{ */}
-        {/*        FontFamily: 'Helvetica Neue', */}
-        {/*        FontWeight: 'normal', */}
-        {/*        FontSize: '20px', */}
-        {/*        TextAlign: 'right', */}
-        {/*        Color: '#707070' */}
-        {/*      }}> */}
-        {/*        Генеральный директор АО «НИПИ «Каспиймунайгаз» */}
-        {/*      </div> */}
-
-        {/*    </div> */}
-
-        {/*  </div> */}
-        {/*  <div style={{ */}
-        {/*    BorderBottom: '1px solid #f2f2f2', */}
-        {/*    Margin: '60px 80px 30px 80px' */}
-        {/*  }}></div> */}
-
-        {/* </div> */}
 
       </div>
 
@@ -1136,9 +918,7 @@ const Home = props => {
             }}><T> Все новости</T></Link>
           </div>
           </div>
-          {/* <Carousel */}
-          {/*  ClassName={classes.news} */}
-          {/*  {...sliderConfig2} > */}
+
           <div>
             {_.map(data, (item) => {
               const id = prop('id', item)
@@ -1158,7 +938,6 @@ const Home = props => {
             })}
           </div>
 
-          {/* </Carousel> */}
           <div style={{
             borderBottom: '1px solid #f2f2f2',
             margin: '60px 80px 30px 80px'
@@ -1180,9 +959,7 @@ const Home = props => {
             }}><T> Все Медиа</T></Link>
           </div>
           </div>
-          {/* <Carousel */}
-          {/*  ClassName={classes.news2} */}
-          {/*  {...sliderConfig3} > */}
+
           {_.map(data, (item) => {
             const id = prop('id', item)
             const createdDate = dateFormat(prop('createdDate', item))

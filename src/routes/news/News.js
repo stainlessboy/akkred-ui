@@ -13,7 +13,7 @@ import {Breadcrumb} from 'antd'
 const styles = {
   blueP: {
     width: '100%',
-    alignContent: 'center',
+    alignContent: 'center'
 
   },
   textP: {
@@ -81,8 +81,8 @@ const styles = {
     marginTop: '30px',
     color: '#3d3daf',
     fontFamily: '"Montserrat-SemiBold", sans-serif',
-    fontSize: '30px',
-  },
+    fontSize: '30px'
+  }
 
 }
 const enhance = compose(
@@ -142,8 +142,7 @@ const News = props => {
               decoration: 'none',
               textAlign: 'center',
               padding: '10px',
-              borderRadius: '4px',
-              opacity: 0.78
+              borderRadius: '4px'
             }}>
             Контакты
             </div>
@@ -166,8 +165,7 @@ const News = props => {
               decoration: 'none',
               textAlign: 'center',
               padding: '10px',
-              borderRadius: '4px',
-              opacity: 0.78
+              borderRadius: '4px'
             }}>
             Ссылки
             </div>
@@ -184,45 +182,14 @@ const News = props => {
       </div>
 
       <div className={classes.card2}>
-        <div className={classes.blueP}>
-          <img style={{
-            height: '326px',
-            width: '100%'
 
-          }} src={Image} alt=""/>
-          <div className={classes.textP2}> Новости
-            <Breadcrumb style={{
-              color: '#fff'
-            }}>
-              <Breadcrumb.Item >Информация</Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <a href="" style={{
-                  color: '#fff'
-                }}>Все новости</a>
-              </Breadcrumb.Item>
-              <Breadcrumb.Item>
-                <a href="" style={{
-                  color: '#fff'
-                }}></a>
-              </Breadcrumb.Item>
-            </Breadcrumb></div>
-
-        </div>
         <Row>
           <Col xs={24}>
             <div style={{
-              // Width: '100%',
-              // BorderRadius: '4px',
-              // Background: '#fff',
-              // BoxShadow: '0px 0px 10px rgba(0, 0, 0, 0.16)',
-              // Margin: '20px 50px 50px 50px',
-              // MarginRight: '50px',
-              paddingBottom: '20px',
-              // MarginTop: '50px',
-              // MarginLeft: '30px',
-              // MarginRight: '30px'
-            }}>
+              marginTop: '60px',
+              paddingBottom: '20px'
 
+            }}>
               <CardList type={NEWS} span={24} data={resultList}/>
               <div className={classes.pagination}>
                 <Pagination filter={resultFilter}/>

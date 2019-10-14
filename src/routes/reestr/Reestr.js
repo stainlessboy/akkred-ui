@@ -28,7 +28,7 @@ export const arrayObjToObj = (ARR) => fp.flow(
 const styles = {
   blueP: {
     width: '100%',
-    alignContent: 'center',
+    alignContent: 'center'
   },
   textP: {
     fontSize: '40px',
@@ -203,13 +203,9 @@ const Reestr = props => {
               }}>
               <tr style={{
                 width: '100%',
-                // Border: '1px solid #555',
-                // Color: '#fff',
-                // Background: '#3b5da7',
                 fontSize: '18px',
                 fontWeight: 400,
                 font: '18px/24px Roboto,Arial,sans-serif'
-                // BorderRadius: '4px',
 
               }}>
                 <td style={{
@@ -257,13 +253,13 @@ const Reestr = props => {
 
                   }}
                   >
-                    {/* <Link to={sprintf(NEWS_ITEM_URL, id)}>{title}</Link> */}
-                    {/* <Link to={sprintf(NEWS_ITEM_URL, id)}>{title}</Link> */}
                     <td style={{
                       padding: '8px',
                       borderBottom: '0.5px solid #d1d1d1'
 
-                    }}><Link to={sprintf(REESTR_ITEM, fp.toNumber(area))}>{number}</Link></td>
+                    }}><Link
+                        to={`/reestr/${area}`}
+                      >{number}</Link></td>
                     <td style={{
                       padding: '8px',
                       borderBottom: '0.5px solid #d1d1d1'

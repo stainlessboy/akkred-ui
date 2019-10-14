@@ -25,7 +25,7 @@ export const SERVICES_URL = `/${SERVICES}`
 
 export const REESTR = 'reestr'
 export const REESTR_URL = `/${REESTR}`
-export const REESTR_ITEM = `/${REESTR}/%d`
+export const REESTR_ITEM = `/${REESTR}/%`
 
 export const USER = 'profile'
 export const USER_URL = `/${USER}`
