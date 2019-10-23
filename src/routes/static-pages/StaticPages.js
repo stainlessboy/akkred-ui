@@ -47,7 +47,7 @@ const styles = {
   },
   RightSide: {
     width: '100%',
-    borderRadius: '10px',
+    borderRadius: ' 0px 0px 10px 10px',
     background: '#fff',
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.16)',
     padding: '20px',
@@ -59,10 +59,11 @@ const styles = {
     // FontFamily: 'Futura Md BT',
     fontWeight: 'normal',
     fontSize: '20px',
+    lineHeight: '1',
     textAlign: 'left',
-    color: '#707070',
+    color: '#636363',
     borderBottom: '0.5px solid #d1d1d1',
-    padding: '10px',
+    padding: '7px ',
     decoration: 'none'
 
   },
@@ -96,12 +97,17 @@ const Company = props => {
             <Breadcrumb style={{
               color: '#989aae'
             }}>
-              <Breadcrumb.Item >{description}</Breadcrumb.Item>
+              <Breadcrumb.Item >О нас</Breadcrumb.Item>
+              <Breadcrumb.Item > <TW>
+                {lang => getTranslate(data, lang, 'description')}
+              </TW></Breadcrumb.Item>
             </Breadcrumb></div>
 
         </div>
         <div className={classes.textStyle}>
-          {description}
+          <TW>
+            {lang => getTranslate(data, lang, 'description')}
+          </TW>
         </div>
         <Row>
 
@@ -126,7 +132,7 @@ const Company = props => {
           </Col>
 
           <Col style={{
-            padding: '50px 50px 100px 0px'
+            padding: '30px 50px 100px 0px'
           }} xs={6}>
             {type === 'about' && (
               <div>

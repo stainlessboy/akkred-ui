@@ -88,17 +88,17 @@ const Company = props => {
             <Breadcrumb style={{
               color: '#989aae'
             }}>
-              <Breadcrumb.Item >Информация</Breadcrumb.Item>
+              <Breadcrumb.Item >О нас</Breadcrumb.Item>
               <Breadcrumb.Item>
                 <a href="" style={{
                   color: '#989aae'
-                }}>Все новости</a>
+                }}>Руководство</a>
               </Breadcrumb.Item>
             </Breadcrumb></div>
 
         </div>
         <div className={classes.textStyle}>
-          Employees
+          Руководство
         </div>
         <Row>
 
@@ -109,6 +109,57 @@ const Company = props => {
             <div className={classes.RightSide}>
               <CardList type={EMPLOYER} span={24} data={resultList}/>
 
+            </div>
+          </Col>
+          <Col style={{
+            padding: '50px 50px 100px 0px'
+          }} xs={6}>
+
+            <div style={{
+              fontFamily: 'Geometria',
+              // FontFamily: 'Montserrat',
+              // FontFamily: 'Futura Md BT',
+              background: '#0b0c66',
+              color: '#fff',
+              fontWeight: 'normal',
+              fontSize: '24px',
+              borderBottom: '0.5px solid #d1d1d1',
+              decoration: 'none',
+              textAlign: 'center',
+              padding: '10px',
+              borderRadius: '4px'
+            }}>
+              Контакты
+            </div>
+            <div className={classes.RightSide}>
+
+              <div>Адрес</div>
+              <div>Телефон</div>
+              <div>Email</div>
+
+            </div>
+            <div style={{
+              fontFamily: 'Geometria',
+              // FontFamily: 'Montserrat',
+              // FontFamily: 'Futura Md BT',
+              background: '#0b0c66',
+              color: '#fff',
+              fontWeight: 'normal',
+              fontSize: '24px',
+              borderBottom: '0.5px solid #d1d1d1',
+              decoration: 'none',
+              textAlign: 'center',
+              padding: '10px',
+              borderRadius: '4px'
+            }}>
+              Ссылки
+            </div>
+            <div className={classes.RightSide}>
+
+              <div><a href="">first link</a></div>
+              <div><a href="">second link</a></div>
+              <div><a href="">first link</a></div>
+              <div><a href="">first link</a></div>
             </div>
           </Col>
         </Row>

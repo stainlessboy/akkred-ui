@@ -3,6 +3,7 @@ import {compose, lifecycle, withHandlers, withState} from 'recompose'
 import injectSheet from 'react-jss'
 import PropTypes from 'prop-types'
 import {Menu, Dropdown, Icon} from 'antd'
+
 import classnames from 'classnames'
 import Link from '../Link'
 import {path, prop} from 'ramda'
@@ -47,7 +48,7 @@ const mapStateToProps = state => ({
   userData: fp.get('user.data', state) || {},
   authLoading: fp.get('login.loading', state)
 })
-
+const {SubMenu} = Menu
 const enhance = compose(
   withHistory,
   connect(mapStateToProps, {logoutAction, setAppLanguageAction}),
@@ -209,8 +210,6 @@ const enhance = compose(
       marginLeft: '30px',
       marginTop: 20,
       cursor: 'pointer',
-      // FontWeight: 700,
-      // FontFamily: '"Montserrat-Medium", sans-serif',
       fontFamily: '\'Montserrat-Medium\', sans-serif',
       fontSize: '16px'
     },
@@ -222,6 +221,15 @@ const enhance = compose(
       fontFamily: '"Montserrat-Medium", sans-serif',
       fontSize: '16px',
       marginRight: '10px'
+    },
+    deleteIcon: {
+      '& svg': {display: 'none'},
+      '&::before': {
+        display: 'none'
+      },
+      '&::after': {
+        display: 'none'
+      }
 
     },
     languageSwitch: {
@@ -234,8 +242,20 @@ const enhance = compose(
       }
 
     },
+    languageSubSwitch: {
+      fontSize: '15px',
+      cursor: 'pointer',
+      fontFamily: '"Montserrat-Medium", sans-serif',
+      color: '#FFF'
+      // '&:hover': {
+      //   Color: '#0b0c66',
+      //   Background: '#FFF'
+      //
+      // },
+    },
     menuAntStyle: {
       background: '#0b0c66'
+      // '& div': {display: 'none'},
 
     }
 
@@ -246,7 +266,73 @@ const Navigation = props => {
   const {classes, userData, isAuth, onLogout, onFeedOpen, color, home, categoryList, ...rest} = props
   const [menuIsOpen, setMenuIsOpen] = React.useState(false)
   const categoryListNew = prop('results', categoryList)
+  const menu1 = (
+    <Menu className={classes.menuAntStyle}>
+      <Menu.Item>
 
+        <div className={classes.languageSwitch} ><Link style={{
+          color: '#FFF'
+        }} to={'/pages/about'}>Об аккредитации </Link>
+
+        </div>
+      </Menu.Item>
+      <SubMenu className={classes.deleteIcon} title={
+        <div className={classes.languageSwitch} ><TS>language</TS>
+        </div>
+      } >
+        <Menu.Item>3rd menu item</Menu.Item>
+        <Menu.Item>4th menu item</Menu.Item>
+      </SubMenu>
+
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} >Организационная структура
+
+        </div>
+      </Menu.Item>
+
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} ><Link style={{
+          color: '#FFF'
+        }} to={'/rukovod'}>Руководство</Link>
+
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} >Совет по аккредитации
+
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} ><Link style={{
+          color: '#fff'
+        }} to={'/pages/tech1'}>Комитеты</Link>
+
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} >Вакансии
+
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} >Противодействие коррупции
+
+        </div>
+      </Menu.Item>
+      <Menu.Item>
+
+        <div className={classes.languageSwitch} >Знак аккредитации
+
+        </div>
+      </Menu.Item>
+    </Menu>
+  )
   const menu3 = (
     <Menu className={classes.menuAntStyle}>
 
@@ -292,64 +378,6 @@ const Navigation = props => {
     </Menu>
   )
 
-  const menu1 = (
-    <Menu className={classes.menuAntStyle}>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} ><Link style={{
-          color: '#FFF'
-        }} to={'/pages/about'}>Об аккредитации </Link>
-
-        </div>
-      </Menu.Item>
-
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Организационная структура
-
-        </div>
-      </Menu.Item>
-
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} ><Link style={{
-          color: '#FFF'
-        }} to={'/rukovod'}>Руководство</Link>
-
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Совет по аккредитации
-
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Комитеты
-
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Вакансии
-
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Противодействие коррупции
-
-        </div>
-      </Menu.Item>
-      <Menu.Item>
-
-        <div className={classes.languageSwitch} >Знак аккредитации
-
-        </div>
-      </Menu.Item>
-    </Menu>
-  )
   const menu2 = (
     <Menu className={classes.menuAntStyle}>
       <Menu.Item>
@@ -365,6 +393,31 @@ const Navigation = props => {
 
         </div>
       </Menu.Item>
+      <SubMenu className={classes.deleteIcon} title={
+        <div className={classes.languageSwitch} >Услуги
+        </div>
+      } >
+        <Menu className={classes.menuAntStyle}>
+          <Menu.Item><div className={classes.languageSubSwitch} > <Link style={{
+            color: '#fff'
+          }} to={'/pages/service1'}>Органы по сертификации продукции</Link></div></Menu.Item>
+          <Menu.Item><div className={classes.languageSubSwitch} > <Link style={{
+            color: '#fff'
+          }} to={'/pages/service2'}>Органы по сертификации систем менеджмента</Link></div></Menu.Item>
+          <Menu.Item><div className={classes.languageSubSwitch} ><Link style={{
+            color: '#fff'
+          }} to={'/pages/service3'}>Органы по сертификации персонала</Link></div></Menu.Item>
+          <Menu.Item><div className={classes.languageSubSwitch} ><Link style={{
+            color: '#fff'
+          }} to={'/pages/service4'}>Испытательные лаборатории</Link></div></Menu.Item>
+          <Menu.Item><div className={classes.languageSubSwitch} ><Link style={{
+            color: '#fff'
+          }} to={'/pages/service5'}>Инспекционные органы</Link></div></Menu.Item>
+          <Menu.Item><div className={classes.languageSubSwitch} ><Link style={{
+            color: '#fff'
+          }} to={'/pages/service6'}>Провайдеры программ проверки квалификации</Link></div></Menu.Item>
+        </Menu>
+      </SubMenu>
 
       <Menu.Item>
 
@@ -527,7 +580,7 @@ const Navigation = props => {
           ...crossBrowserify('justifyContent', 'space-between'),
           backgroundColor: (navBackground || !home) ? '#0b0c66' : 'transparent'}}>
           <div style={{
-            ...fallbacksStyle('display', 'flex'),
+            ...fallbacksStyle('display', 'flex')
           }}>
             <div className={classes.styledLogo} >
               <img style={{width: '100px'}} src={Logo} alt=""/>
@@ -542,7 +595,7 @@ const Navigation = props => {
 
             <div className={classes.menuItems}>
 
-              <Dropdown overlay={menu1}>
+              <Dropdown overlay={menu1} >
                 <div > <TS>about</TS> </div>
               </Dropdown>
             </div>

@@ -1,5 +1,6 @@
 // export const API_HOST = 'localhost:8000'
-export const API_HOST = '217.29.122.26:8081'
+// export const API_HOST = '217.29.126.137:8081'
+export const API_HOST = 'test.akkred.uz:8081'
 export const API_ROOT = 'api'
 export const API_VERSION = 'v1'
 export const API_PROTOCOL = 'http'

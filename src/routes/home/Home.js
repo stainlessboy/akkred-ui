@@ -610,7 +610,7 @@ const Home = props => {
                   <div style={{
                     display: 'flex'
                   }}>
-                    <div className={classes.sliderMore}>Батафсил</div>
+                    <div className={classes.sliderMore}>Подробнее</div>
                     <div className={classes.sliderDate}>{createdDate} </div>
                   </div>
                 </div>

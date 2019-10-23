@@ -128,7 +128,7 @@ const Company = props => {
               decoration: 'none',
               textAlign: 'left',
               padding: '10px 10px 10px 22px',
-              borderRadius: '10px 10px 0 0 ',
+              borderRadius: '10px 10px 0 0 '
             }}>
               Меню
             </div>
@@ -166,48 +166,43 @@ const Company = props => {
                 fontSize: '18px',
                 fontWeight: 400,
                 font: '18px/24px Roboto,Arial,sans-serif',
-                borderRadius: '4px',
-
+                borderRadius: '4px'
 
               }}>
                 <td style={{
                   padding: '8px',
                   borderRight: '1px solid white',
-                  borderLeft: '1px solid white',
-                  textAlign: 'center',
-
+                  borderLeft: '1px solid black',
+                  borderTop: '1px solid black',
+                  textAlign: 'center'
 
                 }}>#
                 </td>
                 <td style={{
                   padding: '8px',
                   borderRight: '1px solid white',
-                  textAlign: 'center',
-
+                  textAlign: 'center'
 
                 }}>Обозначение документа
                 </td>
                 <td style={{
                   padding: '8px',
                   borderRight: '1px solid white',
-                  textAlign: 'center',
-
+                  textAlign: 'center'
 
                 }}>Наименование документа
                 </td>
                 <td style={{
                   padding: '8px',
                   borderRight: '1px solid white',
-                  textAlign: 'center',
-
+                  textAlign: 'center'
 
                 }}>Дата введение
                 </td>
                 <td style={{
                   padding: '8px',
-                  borderRight: '1px solid white',
-                  textAlign: 'center',
-
+                  borderRight: '1px solid black',
+                  textAlign: 'center'
 
                 }}>Документы
                 </td>
@@ -223,8 +218,7 @@ const Company = props => {
                     fontSize: '16px',
                     // Background: '#eff5f7',
                     color: '#555',
-                    borderRadius: '8px',
-
+                    borderRadius: '8px'
 
                   }}
                   >
@@ -242,14 +236,13 @@ const Company = props => {
                     <td style={{
                       padding: '8px',
                       borderRight: '1px solid black',
-                      textAlign: 'center',
-
+                      textAlign: 'center'
 
                     }}>{title}</td>
                     <td style={{
                       padding: '8px',
                       borderRight: '1px solid black',
-                      textAlign: 'center',
+                      textAlign: 'center'
 
                     }}>2019-01-01</td>
                     <td style={{
@@ -259,7 +252,6 @@ const Company = props => {
                       textAlign: 'center'
                     }}><a href={file}>Скачать</a></td>
                   </tr>
-
 
                 )
               })}

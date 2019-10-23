@@ -40,14 +40,15 @@ const style = {
   textWrapper: {
     fontSize: '18px',
     color: '#000',
-    fontFamily: '\'Montserrat-Regular\', sans-serif'
+    fontFamily: '\'Montserrat-Regular\', sans-serif',
+    marginTop: '8px'
 
   },
   socialWrapper: {
     fontSize: '16px',
     color: '#222',
     backgroundColor: 'transparent',
-    marginTop: '5px'
+    marginTop: '8px'
     // FontFamily: '"Montserrat-Regular", sans-serif'
   }
 }
@@ -63,23 +64,24 @@ const EmployerCard = props => {
   // Const img = pathOr(Task, ['gallery', '0', 'file'], data)
 
   return (
-    <Link to={sprintf(RUKOVODITELI_ITEM, id)}>
-      <div className={classes.mediaWrap}>
-        <div className={classes.imageWrap}>
-          <img style={{
-            height: '200px',
-            width: '200px'
-          }} src={Hasanboy} alt=""/>
-        </div>
-        <div>
-          <div className={classes.mainTextWrapper}>Умурзаков Сардор Уктамович</div>
-          <div className={classes.textWrapper}>Вазир</div>
-          <div className={classes.socialWrapper}>info@mift.uz</div>
-          <div className={classes.socialWrapper}> +998 (71) 238-50-00</div>
-          <div className={classes.socialWrapper}> More ...</div>
+
+    <div className={classes.mediaWrap}>
+      <div className={classes.imageWrap}>
+        <img style={{
+          height: '200px',
+          width: '200px'
+        }} src={Hasanboy} alt=""/>
+      </div>
+      <div>
+        <div className={classes.mainTextWrapper}>Умурзаков Сардор Уктамович</div>
+        <div className={classes.textWrapper}>Вазир</div>
+        <div className={classes.socialWrapper}>info@mift.uz</div>
+        <div className={classes.socialWrapper}> +998 (71) 238-50-00</div>
+        <div className={classes.socialWrapper}> Режим работы: c 9:00 до 18:00</div>
+        <div className={classes.socialWrapper}> <Link to={sprintf(RUKOVODITELI_ITEM, id)}>Подробнее</Link>
         </div>
       </div>
-    </Link>
+    </div>
 
   )
 }

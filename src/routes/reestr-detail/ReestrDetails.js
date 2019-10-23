@@ -93,7 +93,7 @@ const enhance = compose(
 )
 const Company = props => {
   const {classes, reestrDetail} = props
-
+  console.warn(reestrDetail,'reestrDetail')
   const data = prop('data', reestrDetail)
   const title = prop('title', data)
   const number = prop('number', data)
@@ -111,28 +111,28 @@ const Company = props => {
   // Const img = pathOr(Image, ['gallery', 'file'], data)
   return (
     <div>
-      <div className={classes.blueP}>
+      {/*<div className={classes.blueP}>*/}
 
-        <div className={classes.textP}>
-          <Breadcrumb style={{
-            color: '#989aae'
-          }}>
-            <Breadcrumb.Item >Информация</Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <a href="" style={{
-                color: '#989aae'
-              }}>Реестры</a>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <a href="" style={{
-                color: '#989aae'
-              }}>{title}</a>
-            </Breadcrumb.Item>
-          </Breadcrumb></div>
+      {/*  <div className={classes.textP}>*/}
+      {/*    <Breadcrumb style={{*/}
+      {/*      color: '#989aae'*/}
+      {/*    }}>*/}
+      {/*      <Breadcrumb.Item >Информация</Breadcrumb.Item>*/}
+      {/*      <Breadcrumb.Item>*/}
+      {/*        <a href="" style={{*/}
+      {/*          color: '#989aae'*/}
+      {/*        }}>Реестры</a>*/}
+      {/*      </Breadcrumb.Item>*/}
+      {/*      <Breadcrumb.Item>*/}
+      {/*        <a href="" style={{*/}
+      {/*          color: '#989aae'*/}
+      {/*        }}>{title}</a>*/}
+      {/*      </Breadcrumb.Item>*/}
+      {/*    </Breadcrumb></div>*/}
 
-      </div>
+      {/*</div>*/}
       <div style={{
-        padding: '50px 50px 100px 30px',
+        padding: '100px 50px 100px 30px',
 
       }} >
 

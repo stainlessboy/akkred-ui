@@ -196,69 +196,120 @@ const Company = props => {
               </div>
             </div>
           </Col>
+          {/*<Col style={{*/}
+          {/*  padding: '50px 50px 100px 0px'*/}
+          {/*}} xs={6}>*/}
+          {/*  <div className={classes.card}>*/}
+          {/*    <div>*/}
+          {/*      <div className={classes.services}>*/}
+          {/*    Сервисы*/}
+          {/*      </div>*/}
+          {/*    </div>*/}
+          {/*    <div className={classes.RightSide}>*/}
+
+          {/*      <ul style={{*/}
+          {/*        listStyle: 'none',*/}
+          {/*        padding: '10px'*/}
+          {/*      }}>*/}
+
+          {/*        <li*/}
+          {/*          className={classes.liStyle}> <Link style={{*/}
+          {/*            color: '#707070'*/}
+          {/*          }} to={'/pages/about'}>Государственные реестры ОOC и МС </Link></li>*/}
+
+          {/*        <li className={classes.liStyle}> <Link style={{*/}
+          {/*          color: '#707070'*/}
+          {/*        }} to={'/pages/history'}>Реестр оценщиков  </Link></li>*/}
+          {/*        <li className={classes.liStyle}> <Link style={{*/}
+          {/*          color: '#707070'*/}
+          {/*        }} to={'/pages/rights'}>Права и обязанности центра </Link></li>*/}
+          {/*        <li className={classes.liStyle}> <Link style={{*/}
+          {/*          color: '#707070'*/}
+          {/*        }} to={'/pages/tasks'}>Реестр технических экспертов</Link></li>*/}
+
+          {/*        <li className={classes.liStyle}> <Link style={{*/}
+          {/*          color: '#707070'*/}
+          {/*        }} to={'/rukovod'}>Калькулятор оказываемых услуг </Link></li>*/}
+
+          {/*      </ul>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*  <div className={classes.card}>*/}
+
+          {/*    <div className={classes.services}>*/}
+          {/*  Контакты*/}
+          {/*    </div>*/}
+          {/*    <div className={classes.RightSide}>*/}
+
+          {/*      <div>Адрес</div>*/}
+          {/*      <div>Телефон</div>*/}
+          {/*      <div>Email</div>*/}
+
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*  <div className={classes.card}>*/}
+
+          {/*    <div className={classes.services}>*/}
+          {/*  Ссылки*/}
+          {/*    </div>*/}
+          {/*    <div className={classes.RightSide}>*/}
+
+          {/*      <div><a href="">first link</a></div>*/}
+          {/*      <div><a href="">second link</a></div>*/}
+          {/*      <div><a href="">first link</a></div>*/}
+          {/*      <div><a href="">first link</a></div>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</Col>*/}
           <Col style={{
             padding: '50px 50px 100px 0px'
           }} xs={6}>
-            <div className={classes.card}>
-              <div>
-                <div className={classes.services}>
-              Сервисы
-                </div>
-              </div>
-              <div className={classes.RightSide}>
 
-                <ul style={{
-                  listStyle: 'none',
-                  padding: '10px'
-                }}>
-
-                  <li
-                    className={classes.liStyle}> <Link style={{
-                      color: '#707070'
-                    }} to={'/pages/about'}>Государственные реестры ОOC и МС </Link></li>
-
-                  <li className={classes.liStyle}> <Link style={{
-                    color: '#707070'
-                  }} to={'/pages/history'}>Реестр оценщиков  </Link></li>
-                  <li className={classes.liStyle}> <Link style={{
-                    color: '#707070'
-                  }} to={'/pages/rights'}>Права и обязанности центра </Link></li>
-                  <li className={classes.liStyle}> <Link style={{
-                    color: '#707070'
-                  }} to={'/pages/tasks'}>Реестр технических экспертов</Link></li>
-
-                  <li className={classes.liStyle}> <Link style={{
-                    color: '#707070'
-                  }} to={'/rukovod'}>Калькулятор оказываемых услуг </Link></li>
-
-                </ul>
-              </div>
+            <div style={{
+              fontFamily: 'Geometria',
+              // FontFamily: 'Montserrat',
+              // FontFamily: 'Futura Md BT',
+              background: '#0b0c66',
+              color: '#fff',
+              fontWeight: 'normal',
+              fontSize: '24px',
+              borderBottom: '0.5px solid #d1d1d1',
+              decoration: 'none',
+              textAlign: 'center',
+              padding: '10px',
+              borderRadius: '4px'
+            }}>
+              Контакты
             </div>
-            <div className={classes.card}>
+            <div className={classes.RightSide}>
 
-              <div className={classes.services}>
-            Контакты
-              </div>
-              <div className={classes.RightSide}>
+              <div>Адрес</div>
+              <div>Телефон</div>
+              <div>Email</div>
 
-                <div>Адрес</div>
-                <div>Телефон</div>
-                <div>Email</div>
-
-              </div>
             </div>
-            <div className={classes.card}>
+            <div style={{
+              fontFamily: 'Geometria',
+              // FontFamily: 'Montserrat',
+              // FontFamily: 'Futura Md BT',
+              background: '#0b0c66',
+              color: '#fff',
+              fontWeight: 'normal',
+              fontSize: '24px',
+              borderBottom: '0.5px solid #d1d1d1',
+              decoration: 'none',
+              textAlign: 'center',
+              padding: '10px',
+              borderRadius: '4px'
+            }}>
+              Ссылки
+            </div>
+            <div className={classes.RightSide}>
 
-              <div className={classes.services}>
-            Ссылки
-              </div>
-              <div className={classes.RightSide}>
-
-                <div><a href="">first link</a></div>
-                <div><a href="">second link</a></div>
-                <div><a href="">first link</a></div>
-                <div><a href="">first link</a></div>
-              </div>
+              <div><a href="">first link</a></div>
+              <div><a href="">second link</a></div>
+              <div><a href="">first link</a></div>
+              <div><a href="">first link</a></div>
             </div>
           </Col>
         </Row>
