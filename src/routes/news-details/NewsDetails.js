@@ -18,13 +18,13 @@ import Gallery1 from './Gallery'
 import {crossBrowserify, fallbacksStyle} from '../../constants/design'
 import sprintf from 'sprintf'
 import {NEWS_ITEM_URL} from '../../constants/routes'
-import {Breadcrumb} from 'antd'
+import {Breadcrumb, Carousel} from 'antd'
 import TW from '../../components/TW'
 import {getTranslate} from '../../helpers/translate'
 const styles = {
   blueP: {
     width: '100%',
-    alignContent: 'center',
+    alignContent: 'center'
 
   },
   textP: {
@@ -86,20 +86,20 @@ const styles = {
     fontSize: '30px',
     textAlign: 'left',
     color: '#000',
-    margin: '20px 10px',
-    // display: 'block',
-    // overflow: 'hidden',
-    // whiteSpace: 'nowrap',
-    // textOverflow: 'ellipsis'
+    margin: '20px 10px'
+    // Display: 'block',
+    // Overflow: 'hidden',
+    // WhiteSpace: 'nowrap',
+    // TextOverflow: 'ellipsis'
 
   },
   textStyle: {
     fontFamily: 'Futura Md BT',
     fontWeight: '500',
-    fontSize: '16px',
+    fontSize: '17px',
     textAlign: 'left',
     color: '#000',
-    margin: '20px 10px'
+    margin: '20px 10px',
 
   },
   galleryStyle: {
@@ -127,7 +127,7 @@ const styles = {
     decoration: 'none',
     textAlign: 'center',
     padding: '10px',
-    borderRadius: '4px',
+    borderRadius: '4px'
   }
 
 }
@@ -142,6 +142,8 @@ const Company = props => {
   const text = prop('text', data)
   const gallery = prop('gallery', data)
   const createdDate = dateFormat(prop('createdDate', data), true)
+  const sliderConfig = {
+  }
   // Const img = pathOr(Image, ['gallery', 'file'], data)
   const IMAGES = _.map(gallery, img => {
     return {
@@ -179,88 +181,44 @@ const Company = props => {
             padding: '50px 50px 100px 30px'
           }} xs={18}>
             <div className={classes.RightSide}>
-              <div style={{
-                margin: '10px'
-              }}>{createdDate} // <strong>Новости</strong>    </div>
               <div className={classes.textTitleStyle}>{title}</div>
-              <div className={classes.textStyle}>
-                {text}
-              </div>
               <div>
-                <div className={classes.textTitleStyle}> Фотогалерея</div>
+                <div style={{
+                  float: 'left',
+                  marginTop: '-5px',
+                  marginRight: '15px'
+                }}>
+                  <Carousel autoplay {...sliderConfig} >
 
-                <div className={classes.galleryStyle}>
+                    {_.map(gallery, (item) => {
+                      const titleImage = prop('file', item)
+                      return (
+                        <div>
+                          <img src={titleImage} style={{
+                            width: '540px',
+                            height: '360px'
+                          }} alt=""/>
 
-                  <Gallery1 images={gallery}/>
+                        </div>
+                      )
+                    })}
+                  </Carousel>
                 </div>
+
+                <div className={classes.textStyle}>
+                  {text}
+
+                </div>
+                {/* <div className={classes.textTitleStyle}> Фотогалерея</div> */}
+
+                {/* <div className={classes.galleryStyle}> */}
+
+                {/* <Gallery1 images={gallery}/> */}
+                {/* </div> */}
               </div>
             </div>
           </Col>
-          {/*<Col style={{*/}
-          {/*  padding: '50px 50px 100px 0px'*/}
-          {/*}} xs={6}>*/}
-          {/*  <div className={classes.card}>*/}
-          {/*    <div>*/}
-          {/*      <div className={classes.services}>*/}
-          {/*    Сервисы*/}
-          {/*      </div>*/}
-          {/*    </div>*/}
-          {/*    <div className={classes.RightSide}>*/}
 
-          {/*      <ul style={{*/}
-          {/*        listStyle: 'none',*/}
-          {/*        padding: '10px'*/}
-          {/*      }}>*/}
-
-          {/*        <li*/}
-          {/*          className={classes.liStyle}> <Link style={{*/}
-          {/*            color: '#707070'*/}
-          {/*          }} to={'/pages/about'}>Государственные реестры ОOC и МС </Link></li>*/}
-
-          {/*        <li className={classes.liStyle}> <Link style={{*/}
-          {/*          color: '#707070'*/}
-          {/*        }} to={'/pages/history'}>Реестр оценщиков  </Link></li>*/}
-          {/*        <li className={classes.liStyle}> <Link style={{*/}
-          {/*          color: '#707070'*/}
-          {/*        }} to={'/pages/rights'}>Права и обязанности центра </Link></li>*/}
-          {/*        <li className={classes.liStyle}> <Link style={{*/}
-          {/*          color: '#707070'*/}
-          {/*        }} to={'/pages/tasks'}>Реестр технических экспертов</Link></li>*/}
-
-          {/*        <li className={classes.liStyle}> <Link style={{*/}
-          {/*          color: '#707070'*/}
-          {/*        }} to={'/rukovod'}>Калькулятор оказываемых услуг </Link></li>*/}
-
-          {/*      </ul>*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*  <div className={classes.card}>*/}
-
-          {/*    <div className={classes.services}>*/}
-          {/*  Контакты*/}
-          {/*    </div>*/}
-          {/*    <div className={classes.RightSide}>*/}
-
-          {/*      <div>Адрес</div>*/}
-          {/*      <div>Телефон</div>*/}
-          {/*      <div>Email</div>*/}
-
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*  <div className={classes.card}>*/}
-
-          {/*    <div className={classes.services}>*/}
-          {/*  Ссылки*/}
-          {/*    </div>*/}
-          {/*    <div className={classes.RightSide}>*/}
-
-          {/*      <div><a href="">first link</a></div>*/}
-          {/*      <div><a href="">second link</a></div>*/}
-          {/*      <div><a href="">first link</a></div>*/}
-          {/*      <div><a href="">first link</a></div>*/}
-          {/*    </div>*/}
-          {/*  </div>*/}
-          {/*</Col>*/}
           <Col style={{
             padding: '50px 50px 100px 0px'
           }} xs={6}>

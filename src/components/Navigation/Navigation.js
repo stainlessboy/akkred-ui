@@ -276,14 +276,6 @@ const Navigation = props => {
 
         </div>
       </Menu.Item>
-      <SubMenu className={classes.deleteIcon} title={
-        <div className={classes.languageSwitch} ><TS>language</TS>
-        </div>
-      } >
-        <Menu.Item>3rd menu item</Menu.Item>
-        <Menu.Item>4th menu item</Menu.Item>
-      </SubMenu>
-
       <Menu.Item>
 
         <div className={classes.languageSwitch} >Организационная структура
