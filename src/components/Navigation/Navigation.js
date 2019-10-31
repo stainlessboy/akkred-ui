@@ -575,7 +575,8 @@ const Navigation = props => {
             ...fallbacksStyle('display', 'flex')
           }}>
             <div className={classes.styledLogo} >
-              <img style={{width: '100px'}} src={Logo} alt=""/>
+              <Link to={'/'}>   <img style={{width: '100px'}} src={Logo} alt=""/>
+              </Link>
             </div>
             <div className={classes.navbarStyled}>
             Государственный Центр Аккредитации Республики Узбекистан

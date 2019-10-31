@@ -13,6 +13,7 @@ import {path, prop, pathOr} from 'ramda'
 import numberFormat from '../../helpers/numberFormat'
 import dateFormat from '../../helpers/dateFormat'
 // Import Image from '../../images/Slider.jpg'
+import HtmlContent from 'components/Utils/HtmlContent'
 
 import Gallery1 from './Gallery'
 import {crossBrowserify, fallbacksStyle} from '../../constants/design'
@@ -99,7 +100,7 @@ const styles = {
     fontSize: '17px',
     textAlign: 'left',
     color: '#000',
-    margin: '20px 10px',
+    margin: '20px 10px'
 
   },
   galleryStyle: {
@@ -139,7 +140,7 @@ const Company = props => {
 
   const data = prop('data', newsDetail)
   const title = prop('title', data)
-  const text = prop('text', data)
+  // Const text = prop('text', data)
   const gallery = prop('gallery', data)
   const createdDate = dateFormat(prop('createdDate', data), true)
   const sliderConfig = {
@@ -206,7 +207,8 @@ const Company = props => {
                 </div>
 
                 <div className={classes.textStyle}>
-                  {text}
+                  {/* {text} */}
+                  <HtmlContent content={_.get(data, 'text')}/>
 
                 </div>
                 {/* <div className={classes.textTitleStyle}> Фотогалерея</div> */}
@@ -306,7 +308,7 @@ const Company = props => {
             }}>{createdDate} // <strong>Новости</strong>    </div>
             <div className={classes.textTitleStyle}>{title}</div>
             <div className={classes.textStyle}>
-              {text}
+              {/*{text}*/}
             </div>
             <div>
               <div className={classes.textTitleStyle}> Фотогалерея</div>

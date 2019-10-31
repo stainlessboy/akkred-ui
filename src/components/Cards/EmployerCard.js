@@ -58,6 +58,9 @@ const enhance = compose(
 const EmployerCard = props => {
   const {classes, data} = props
   const id = prop('id', data)
+  const name = prop('name', data)
+  const description = prop('description', data)
+  const position = prop('position', data)
   // Const title = prop('title', data) || 'Сервис растет, помогите его улучшить для вас'
   // Const imageUrl = path(['image', 'file'], data) || 'Сервис растет, помогите его улучшить для вас'
   // Const createdDate = dateFormat(prop('createdDate', data)) || '12 февраля 2019'
@@ -73,7 +76,7 @@ const EmployerCard = props => {
         }} src={Hasanboy} alt=""/>
       </div>
       <div>
-        <div className={classes.mainTextWrapper}>Умурзаков Сардор Уктамович</div>
+        <div className={classes.mainTextWrapper}>{name}</div>
         <div className={classes.textWrapper}>Вазир</div>
         <div className={classes.socialWrapper}>info@mift.uz</div>
         <div className={classes.socialWrapper}> +998 (71) 238-50-00</div>
